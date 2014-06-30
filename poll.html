@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<body class="background">
+<link rel="stylesheet" type="text/css" href="poll.css">
+
+	<fieldset>
+	<legend class="order"><b>Team A Poll</b> </legend>
+	<br>
+		<menu>
+			<form class="order" action="poll.php" method="POST">
+					<ul>
+						<label for="name">Enter First Name</label>
+						<input type="text" name="fname" autofocus="on" required="on"><br>
+					</ul>
+					<ul>
+						<label for="name">Enter Last Name</label>
+						<input type="text" name="lname" autofocus="on" required="on"><br>
+					</ul>
+					<ul>
+						<label for="Vantage">Vantage</label>
+						<input type="checkbox" name="vantage_theme" value="1"><br>
+					</ul>
+					<ul>
+						<label for="Eighties">Eighties</label>
+						<input type="checkbox" name="eighties_theme" value="1"><br>
+					</ul>
+					<ul>
+						<label for="Enter">Other theme name </label>
+						<input type="text" name="theme"><br>
+					</ul>
+					<br>
+					<input type="submit" class="button" name="Submit">
+			</form>
+		</menu>
+	</fieldset>
+</body>
