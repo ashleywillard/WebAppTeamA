@@ -22,7 +22,7 @@ define('DB_NAME', 'wpdb');
 define('DB_USER', 'wpuser');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'adrian11');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
