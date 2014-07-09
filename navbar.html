@@ -1,0 +1,215 @@
+<!DOCTYPE html> 
+<html> 
+<link rel="stylesheet" type="text/css" href="navbar.css">
+  <script type="text/javascript">
+    function load() {
+      var myDate = new Date();
+      var daynum = myDate.getDay();
+      	if (daynum == 1) {
+        document.getElementById('monday').focus();
+      }
+	if (daynum == 2) {
+        document.getElementById('tuesday').focus();
+      }
+	if (daynum == 3) {
+        document.getElementById('wednesday').focus();
+      }
+	if (daynum == 4) {
+       document.getElementById('thursday').focus();
+      }
+	if (daynum == 5) {
+        document.getElementById('friday').focus();
+      }
+    }
+    function here(){
+    	document.bgColor = "#CCFFFF";
+    	var myDates = new Date();
+      	var daynums = myDates.getDay();
+      	var hours = myDates.getHours();
+      	if (daynums == 1) {
+    	document.getElementById('mondays').style.display= 'block';
+    	if (hours > 7 && hours < 12){
+    		document.getElementById('bfast').style.display = 'block';
+    	} else if (hours> 12 && hours < 16) {
+    		document.getElementById('lunch').style.display = 'block';
+    	} else if (hours > 16) {
+    		document.getElementById('dinner').style.display = 'block';
+    	}
+    }
+    		if (daynums == 2) {
+    	document.getElementById('tuesdays').style.display= 'block';
+    	if (hours > 7 && hours < 12){
+    		document.getElementById('tbfast').style.display = 'block';
+    	} else if (hours> 12 && hours < 16) {
+    		document.getElementById('tlunch').style.display = 'block';
+    	} else if (hours > 16) {
+    		document.getElementById('tdinner').style.display = 'block';
+    	}
+    }
+    	if (daynums == 3) {
+    	document.getElementById('wednesdays').style.display= 'block';
+    	if (hours > 7 && hours < 12){
+    		document.getElementById('wbfast').style.display = 'block';
+    	} else if (hours> 12 && hours < 16) {
+    		document.getElementById('wlunch').style.display = 'block';
+    	} else if (hours > 16) {
+    		document.getElementById('wdinner').style.display = 'block';
+    	}
+    }
+    	if (daynums == 4) {
+    	document.getElementById('thursdays').style.display= 'block';
+    	if (hours > 7 && hours < 12){
+    		document.getElementById('rbfast').style.display = 'block';
+    	} else if (hours> 12 && hours < 16) {
+    		document.getElementById('rlunch').style.display = 'block';
+    	} else if (hours > 16) {
+    		document.getElementById('rdinner').style.display = 'block';
+    	}
+    }
+    	if (daynums == 5) {
+    	document.getElementById('fridays').style.display= 'block';
+    	if (hours > 7 && hours < 12){
+    		document.getElementById('fbfast').style.display = 'block';
+    	} else if (hours> 12 && hours < 16) {
+    		document.getElementById('flunch').style.display = 'block';
+    	} else if (hours > 16) {
+    		document.getElementById('fdinner').style.display = 'block';
+    	}
+    }
+    }
+  </script>
+
+
+<body onload="load()"> 
+<div id="navbar"> 
+  <ul> 
+	<li><a href="" id="monday" onFocus="here()">monday</a></li> 
+	<li><a href="#" id="tuesday"  onFocus="here()">tuesday</a></li> 
+	<li><a href="#" id="wednesday"  onFocus="here()">wednesday</a></li> 
+	<li><a href="#" id="thursday"  onFocus="here()">thursday</a></li> 
+	<li><a href="#" id="friday"  onFocus="here()">friday</a></li> 
+  </ul> 
+</div> 
+
+<div id="mondays" hidden="true">
+	<p>Does this show only for monday?</p>
+	<span id="bfast" hidden="true">Bfast menu here
+		<ol>
+			<li>eggs</li>
+			<li>more eggs</li>
+			<li>even more eggs</li>
+		</ol>
+	</span><br>
+	<span id="lunch" hidden="true">Lunch menu here
+		<ol>
+			<li>sandwich</li>
+			<li>more sandwiches</li>
+			<li>even more sandwiches</li>
+		</ol>
+	</span><br>
+	<span id="dinner" hidden="true">Dinner menu here
+		<ol >
+			<li>steak</li>
+			<li>more steak</li>
+			<li>even more steak</li>
+		</ol>
+	</span>
+</div>
+<div id="tuesdays" hidden="true">
+	<p>Does this show only for tuesday?</p>
+		  <span id="tbfast" hidden="true">Bfast menu here
+    <ol>
+      <li>eggs</li>
+      <li>more eggs</li>
+      <li>even more eggs</li>
+    </ol>
+  </span><br>
+  <span id="tlunch" hidden="true">Lunch menu here
+    <ol>
+      <li>sandwich</li>
+      <li>more sandwiches</li>
+      <li>even more sandwiches</li>
+    </ol>
+  </span><br>
+  <span id="tdinner" hidden="true">Dinner menu here
+    <ol >
+      <li>steak</li>
+      <li>more steak</li>
+      <li>even more steak</li>
+    </ol>
+  </span>
+</div>
+<div id="wednesdays" hidden="true">
+  <p>Does this show only for wednesday?</p>
+	<span id="wbfast" hidden="true">Bfast menu here
+    <ol>
+      <li>eggs</li>
+      <li>more eggs</li>
+      <li>even more eggs</li>
+    </ol>
+  </span><br>
+  <span id="wlunch" hidden="true">Lunch menu here
+    <ol>
+      <li>sandwich</li>
+      <li>more sandwiches</li>
+      <li>even more sandwiches</li>
+    </ol>
+  </span><br>
+  <span id="wdinner" hidden="true">Dinner menu here
+    <ol >
+      <li>steak</li>
+      <li>more steak</li>
+      <li>even more steak</li>
+    </ol>
+  </span>
+</div>
+<div id="thursdays" hidden="true">
+	<p>Does this show only for thursday?</p>
+		  <span id="rbfast" hidden="true">Bfast menu here
+    <ol>
+      <li>eggs</li>
+      <li>more eggs</li>
+      <li>even more eggs</li>
+    </ol>
+  </span><br>
+  <span id="rlunch" hidden="true">Lunch menu here
+    <ol>
+      <li>sandwich</li>
+      <li>more sandwiches</li>
+      <li>even more sandwiches</li>
+    </ol>
+  </span><br>
+  <span id="rdinner" hidden="true">Dinner menu here
+    <ol >
+      <li>steak</li>
+      <li>more steak</li>
+      <li>even more steak</li>
+    </ol>
+  </span>
+</div>
+<div id="fridays" hidden="true">
+	<p>Does this show only for friday?</p>
+		<span id="fbfast" hidden="true">Bfast menu here
+    <ol>
+      <li>eggs</li>
+      <li>more eggs</li>
+      <li>even more eggs</li>
+    </ol>
+  </span><br>
+  <span id="flunch" hidden="true">Lunch menu here
+    <ol>
+      <li>sandwich</li>
+      <li>more sandwiches</li>
+      <li>even more sandwiches</li>
+    </ol>
+  </span><br>
+  <span id="fdinner" hidden="true">Dinner menu here
+    <ol >
+      <li>steak</li>
+      <li>more steak</li>
+      <li>even more steak</li>
+    </ol>
+  </span>
+</div>
+</body> 
+</html>
