@@ -1,0 +1,143 @@
+<html><head></head><body class="background">
+<link rel="stylesheet" type="text/css" href="http://web.njit.edu/~am484/202/chat.css">
+<script type="text/javascript"> 
+function createRequestObject()
+{
+    var ro;
+    var browser = navigator.appName;
+    if(browser == "Microsoft Internet Explorer")
+    { ro = new ActiveXObject("Microsoft.XMLHTTP");  }
+    else
+    { ro = new XMLHttpRequest();    }
+    return ro;
+}
+var http = createRequestObject();
+function sndReq(){
+  u = document.getElementById("name1").value
+  v = document.getElementById("message").value
+    http.open('post'  , 'ajaxsplit.php?name1=' + u  + "&message="  + v + "&junk="+ Math.random()  );  
+    http.onreadystatechange = handleResponse;
+    http.send(null);
+}
+function handleResponse()
+{   if( http.readyState == 4 )
+    {   var response = http.responseText;
+      //alert(response)
+    //document.getElementById("message").innerHTML = response;
+    //alert(response);
+     var A = response.split ("***");
+    
+         document.getElementById("target").innerHTML = "Hi " + A[0] + "<br>I hear you live at: " + A[1];  
+     //var B = A[0];
+     //var C = A[1];
+     
+    }
+}
+var http1 = createRequestObject();
+function sndReq2(){
+  a = document.getElementById("name2").value
+  b = document.getElementById("message2").value
+    http1.open('post'  , 'ajaxsplit2.php?name2=' + a  + "&message2="  + b + "&junk=" +Math.random()  );  
+    http1.onreadystatechange = handleResponse1;
+    http1.send(null);
+  
+}
+function handleResponse1()
+{   if( http1.readyState == 4 )
+    {   var response = http1.responseText;
+      //alert(response)
+    
+    //alert(response);
+     var B = response.split ("***");
+    // //alert("A0 " + A[0] + " " + "A[1] " + A[1])
+         document.getElementById("message2").innerHTML = B[1];  
+     //var B = A[0];
+     //var C = A[1];
+
+    }
+}
+
+
+
+
+var http2 = createRequestObject();
+function sndReq3(){
+  g = document.getElementById("password1").value
+  h = document.getElementById("name1").value
+    http2.open('post'  , 'ajaxsplit3.php?password1=' + g  + "&name1="  + h + "&junk="+Math.random()  );  
+    http2.onreadystatechange = handleResponse2;
+    http2.send(null);
+  
+}
+function handleResponse2()
+{   if( http2.readyState == 4 )
+    {   var response = http2.responseText;
+      //alert(response)
+    //document.getElementById("message").innerHTML = response;
+    //alert(response);
+     var C = response.split ("***");
+    // //alert("A0 " + A[0] + " " + "A[1] " + A[1])
+  
+         document.getElementById("warning").innerHTML = "";
+     if (C[1] != g){
+     document.getElementById("warning").innerHTML = "Pass did not match ";
+     }
+     //+ C[0] + "<br>I hear you live at: " + C[1];  
+     //var B = A[0];
+     //var C = A[1];
+
+    }
+}
+
+
+</script>
+  <fieldset>
+  <legend class="order"><b>Chat</b> </legend>
+  <br>
+    <menu>
+      <form class="order" action="http://web.njit.edu/~am484/202/register.php" method="POST">
+        <ol>
+        <li>
+            <label for="Current">Current Users</label>
+              <select id="name" name="CurrentUsers">
+              <option value="am484">am484</option><option value="am488">am488</option>    
+            </select>
+            </li>
+          <li>
+            <label for="username">Username</label>
+            <input type="text" id="name1" name="username" placeholder="Enter Username" class="form-control" onkeyup="sndReq()"><br>
+          </li>
+          
+          
+          <li>
+            <label for="password">Password</label>
+            <input type="text" id="password1" name="password" placeholder="Enter password" class="form-control" onkeyup="sndReq3()"><br>
+            <span id="warning"></span>
+          </li>
+
+          <li>
+            <label for="Message">Message</label>
+            <textarea type="text" name="message" id="message" placeholder="Enter message" class="form-control" onkeyup="sndReq()"></textarea>
+          </li>
+          <hr>
+          <br>
+          
+          
+          <form class="order" action="http://web.njit.edu/~am484/202/ajaxsplit2.php" method="POST">
+          
+          <li>
+            <input class="button" onclick="sndReq2()" name="button" value="Listen">
+            <input class="button2" onclick="setTimeout(sndReq2(), 0)" name="button" value="Stop">
+            <input class="button2" onclick="setTimeout(sndReq2(), 1000)" name="button" value="Poll">
+            <label for="username">Username</label>
+            <input type="text" id="name2" name="username" placeholder="Enter Username" class="form-control"><br>
+            <span id="warning2">
+          </span></li>
+          <li>
+            <label for="Message">Message</label>
+            <textarea type="text" id="message2" name="message" placeholder="Enter message" class="form-control"></textarea>
+          </li>
+          </form>
+
+        </ol></form>
+</menu></fieldset></body></html>
