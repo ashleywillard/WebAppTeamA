@@ -1,0 +1,44 @@
+<script>
+
+
+function createRequestObject()
+{
+    var ro;
+    var browser = navigator.appName;
+    alert(browser);
+    if(browser == "Microsoft Internet Explorer")
+    { ro = new ActiveXObject("Microsoft.XMLHTTP");  }
+    else
+    { ro = new XMLHttpRequest();    }
+    return ro;
+}
+var http = createRequestObject();
+
+function sndReq()
+{   u = document.getElementById("N100").value
+    http.open('get'  , 'ajax1.php?data=' + u  +  "&junk="+Math.random()  );  //forces not from cache
+    http.onreadystatechange = handleResponse;
+    http.send(null);
+}
+
+
+function handleResponse()
+{   if( http.readyState == 4 )
+    {   var response = http.responseText;
+        //alert(response)
+        document.getElementById("N200").innerHTML = response
+    }
+}
+
+</script>
+
+<style type="text/css">
+  div  { background-color: yellow; }
+</style>
+<h1>alsjdnasj</h1>
+<html>
+	<body>
+		<input type="text" id="N100" onkeyup="sndReq()">Enter 
+		<div id="N200"></div>
+	</body>
+</html>

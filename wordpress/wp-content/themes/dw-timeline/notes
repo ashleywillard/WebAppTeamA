@@ -1,0 +1,19 @@
+$sep can display text before or after the page title
+wp_title()
+
+in function.php
+
+wp_enque_style('main', get_template_directory_uri() . '/style.css')
+
+add_action('wp_enqeue_');
+
+
+//include javascript
+
+function theme_js{
+	wp_register_script('flexslider', get_template_directory_uri() . '/js/flexslider.js', array('jquery'), '', true);
+	if(is_page('home')){
+	wp_enqueue_script('flexslider');
+	}
+}
+add_action('wp_enqueue_scripts', 'theme_js');
