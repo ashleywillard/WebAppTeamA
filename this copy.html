@@ -1,0 +1,154 @@
+
+<style>
+
+
+input[type=checkbox].filter {
+display:none;
+}
+
+input[type=checkbox].filter + label.filter-label1 {
+padding-left:27px;
+padding-right: 0px;
+/*height:px; */
+display:inline-block;
+line-height:22px;
+background-image:url("OrangeUnchecked.png");
+background-repeat:no-repeat;
+background-size: 22px 22px;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+
+}
+
+input[type=checkbox].filter:checked + label.filter-label1 {
+background-image:url("OrangeChecked.png");
+}
+label.filter-label1 {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].filter + label.filter-label2 {
+padding-left:27px;
+display:inline-block;
+line-height:22px;
+background-image:url("RedUnchecked.png");
+background-repeat:no-repeat;
+background-size: 22px 22px;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+
+}
+
+input[type=checkbox].filter:checked + label.filter-label2 {
+background-image:url(RedChecked.png);
+}
+label.filter-label2 {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].filter + label.filter-label3 {
+padding-left:27px;
+display:inline-block;
+line-height:22px;
+background-image:url(PurpleUnchecked.png);
+background-repeat:no-repeat;
+background-size: 22px 22px;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+
+}
+
+input[type=checkbox].filter:checked + label.filter-label3 {
+background-image:url(PurpleChecked.png);
+}
+label.filter-label3 {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].filter + label.filter-label4 {
+padding-left:27px;
+display:inline-block;
+line-height:22px;
+background-image:url(BlueUnchecked.png);
+background-repeat:no-repeat;
+background-size: 22px 22px;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+
+}
+
+input[type=checkbox].filter:checked + label.filter-label4 {
+background-image:url(BlueChecked.png);
+}
+label.filter-label4 {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].filter + label.filter-label5 {
+padding-left:27px;
+display:inline-block;
+line-height:22px;
+background-image:url(GreenUnchecked.png);
+background-repeat:no-repeat;
+background-size: 22px 22px;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+
+}
+
+input[type=checkbox].filter:checked + label.filter-label5 {
+background-image:url(GreenChecked.png);
+}
+label.filter-label5 {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+</style>
+<form class="sform">
+    <input id="check1" class="filter" type="checkbox" name="glutenFree"></input>
+    <label class="filter-label1" onclick="gfGo()" for="check1"></label>
+    <input id="check2" class="filter" type="checkbox" name="nutFree"></input>
+    <label class="filter-label2" for="check2"></label>
+    <input id="check3" class="filter" type="checkbox" name="shellfishFree"></input>
+    <label class="filter-label3" for="check3"></label>
+    <input id="check4" class="filter" type="checkbox" name="eatSmart"></input>
+    <label class="filter-label4" for="check4"></label>
+    <input id="check5" class="filter" type="checkbox" name="vegan"></input>
+    <label class="filter-label5" for="check5"></label>
+    <input type="submit" value="Filter" name="submit"></input>
+</form>
