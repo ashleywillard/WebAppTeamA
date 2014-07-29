@@ -83,7 +83,7 @@ function sndReq3(){
 }
 function handleResponse2()
 {   if( http2.readyState == 4 )
-    {  alert('http2.responseText'); 
+    {
       var response = http2.responseText;
 
 
@@ -155,26 +155,63 @@ function handleResponse2()
     <body>
     	<br>
     	<div class="col-xs-3">
+
           <div class="tile">
             <h3 class="tile-title">Log In</h3>
-            <form action="../account.php" method="POST" >
-            <br>
-        		
-        			
-        			<!-- <div class="form-group has-success"> -->
-        			<label for"Email">Enter Email Address</label>
-		            <input type="email" id="name1" name="name1" autofocus="on" autocomplete="off"  onkeyup="sndReq2()" required="on" class="form-control">
-		            <!-- </div> -->
-					
-        		<br>
-        			<label for="Password">Password</label>
-					<input type="password" id="password1" name="password1" required="on" onkeyup="sndReq3()" class="form-control">
-        		<br>
-				 <span id="warning"></span>
-            	<input id="get-started" class="btn btn-primary btn-large btn-block btn-coner" type="submit" name="button"></input>
-            </form>
+
+                  <form action="../account.php" method="POST" >
+                  <br>
+              		
+              			
+              			<!-- <div class="form-group has-success"> -->
+              			<label for"Email">Enter Email Address</label>
+      		            <input type="email" id="name1" name="name1" autofocus="on" autocomplete="off"  onkeyup="sndReq2()" required="on" class="form-control">
+      		            <!-- </div> -->
+      					
+              		<br>
+              			<label for="Password">Password</label>
+      					<input type="password" id="password1" name="password1" required="on" onkeyup="sndReq3()" class="form-control">
+              		<br>
+      				    <span id="warning"></span>
+                  	<input id="get-started" class="btn btn-primary btn-large btn-block btn-coner" type="submit" name="button"></input>
+                  </form>
+          </div>
+          <br>
+          <div class="tile">
+            <h3 class="tile-title">Register New User</h3>
+
+                  <form action="../thisaccount.php" method="POST" >
+                  
+              
+                  <br>
+                    <label for="firstname">Enter First Name</label>
+                    <input type="text" id="firstname" name="firstname" required="on" onkeyup="" class="form-control">
+                    <label for="lastname">Enter Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required="on" onkeyup="" class="form-control">
+                    <label for"Email">Enter Email Address</label>
+                      <input type="dropdown" id="name2" name="name2" autofocus="on" autocomplete="off"  onkeyup="" required="on" class="form-control">
+                    <!-- <div class="form-group has-success"> -->
+                    <label for"Email">Enter Location</label>
+                      <!-- <input type="select" id="location" name="name2" autofocus="on" autocomplete="off"  onkeyup="sndReq2()" required="on" class="form-control"> -->
+                      <!-- </div> --><br>
+                      <select>
+                          <option value="NJ" name="NJ" id="NJ">NJ</option>
+                          <option value="NY" name="NY" id="NY">NY</option>
+                          <option value="EC" name="EC" id="EC">EC</option>
+                      </select>
+                      <br>
+                      <br>
+                    <label for="Password">Password</label>
+                    <input type="password" id="password2" name="password2" required="on" onkeyup="" class="form-control">
+                    <!-- <label for="Password">Confirm Password</label> -->
+                    <!-- <input type="password" id="password2" name="password2" required="on" onkeyup="" class="form-control"> -->
+                  <br>
+                  <!-- <span id="warning"></span> -->
+                    <input id="get-started" class="btn btn-primary btn-large btn-block btn-coner" type="submit" name="butto2n"></input>
+                  </form>
           </div>
         </div>
+        <br>
 
     </body>
 

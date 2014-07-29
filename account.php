@@ -34,16 +34,17 @@ $db_connect = mysql_connect($hostname,$username,$password);
 
 $db_select = mysql_select_db($project);
 	
-	$email = $_POST['email'];
+	$email = $_POST['name1'];
  	$email = mysql_real_escape_string($email);
 
- 	$password = $_POST['password'];
+ 	$password = $_POST['password1'];
  	$password = mysql_real_escape_string($password);
- 	$newpass = md5($password);
+ 	// $newpass = md5($password);
 
  	
 	
-	 	$sql = "select * from cafeteria where employeeEmail = '$email' and employeeLocation ='LA' ";
+	 	// $sql = "select * from cafeteria where employeeEmail = '$email' and employeeLocation ='LA' ";
+ 		$sql = "select * from cafeteria where employeeEmail = '$email'";
 		$result = mysql_query($sql);
 	if (mysql_num_rows($result) != 0) {
 		
@@ -51,8 +52,8 @@ $db_select = mysql_select_db($project);
 
 	} else {
 	
-		header('Location: login');
-		// echo "Please try again! Invalid login.";
+		header('Location: weekly-menu');
+
 	}
 
 

@@ -40,9 +40,9 @@
               <?php echo dw_timeline_title(); ?>
             </h1>
             <h2 class="page-description"><?php bloginfo('description'); ?></h2>
-            <a id="get-started" class="btn btn-default btn-coner " href="los-angeles-2">Los Angeles</a>
-            <a id="get-started" class="btn btn-default btn-coner " href="wp-login.php">Englewood Cliffs</a>
-            <a id="get-started" class="btn btn-default btn-coner " href="wp-content/themes/dw-timeline/base-survey.php">New York</a>
+            <a id="get-started" class="btn btn-default btn-coner " href="weekly-menu">Los Angeles</a>
+            <a id="get-started" class="btn btn-default btn-coner " href="weekly-menu">Englewood Cliffs</a>
+            <a id="get-started" class="btn btn-default btn-coner " href="weekly-menu">New York</a>
           </div>
         </hgroup>
       <?php elseif( is_search() ) : ?>

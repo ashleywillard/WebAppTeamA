@@ -25,10 +25,10 @@
 // 	$sql = "select [chat_content] from registered_student where username = '$username' and password = '$password'";
 // 	$result = mysql_query($sql);
 
-$hostname = "localhost";
+	$hostname = "localhost";
 $username = "wordpressuser";
 $password = "adrian11";
-$project = "wordpress";
+$project = "am484";
 
 $db_connect = mysql_connect($hostname,$username,$password);
 
@@ -39,11 +39,11 @@ $db_select = mysql_select_db($project);
 
  	$password = $_POST['password1'];
  	$password = mysql_real_escape_string($password);
- 	$newpass = md5($password);
+ 	// $newpass = md5($password);
 
- 	
+ 	//this is the new file andi
 	
-	 	$sql = "select * from cafeteria where employeeEmail = '$email' and employeeLocation ='LA' ";
+	 	$sql = "select * from chat where name = '$email' and password ='$password' ";
 		$result = mysql_query($sql);
 	if (mysql_num_rows($result) != 0) {
 		
